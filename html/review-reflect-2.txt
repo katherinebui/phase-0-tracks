@@ -1,0 +1,27 @@
+Briefly describe your understanding of what the browser does, including definitions of the following:
+client: your computer 
+server: another computer (on the internet?)
+render: process of converting text and image data for humans to look at
+
+What is HTML? In your answer, include definitions of the following:
+tag: keywords in a web page that describes how your browser has to format and display it’s content
+element:an individual feature 
+node: all elements of HTML are notes
+attribute: characteristics of elements
+block element: an element that takes up the entire container 
+inline element: an element takes much the necessary space
+
+Very briefly, explain the purpose of the following elements:
+head: a place to put heading elements, for example, title.
+body: the body of your age
+p: paragraph
+form: a page that contains a place to put text, drop-down menu, and buttons
+div: a container, a divider 
+span: a way to group inline elements together
+select: a select menu, adding <option> will give you a drop down list
+h2: a heading element, it is smaller than h1
+ol: ordered list, will give you a list with numbers
+ul: unordered list, will give you bullet points
+table: literally a table
+tr: table row
+td: a cell
