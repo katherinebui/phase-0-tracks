@@ -1,3 +1,8 @@
+body {
+  max-width: 960px; 
+  min-width: 280px;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -9,6 +14,17 @@ cite {
   margin-top: 10px;
 }
 
+#main-content {
+  max-width: 756px;
+  display: inline-block;
+}
+
+#external-links {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
@@ -18,7 +34,7 @@ cite {
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 figure {
@@ -30,3 +46,23 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: .5em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+   #main-content, #external-links { 
+    display: block;
+  }
+
+
+/*@media was used for print, now it's @media screen or device
+screen is telling code what it is going to be formated for
+conditional - can do ranges, ie min-width, etc.
+breakpoints - certain points where you move onto a bigger screen, 
+the width where the design of the site changes */
+
+
