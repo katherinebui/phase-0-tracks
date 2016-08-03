@@ -1,0 +1,46 @@
+Elevator Algorithm:
+
+Robot walks into the elevator:
+
+While the robot is in the elevator:
+	- Ask, “What level are you going to?”
+	- If no answer, ask again: “What level are you going to?”
+When level number is given:
+	- Start at the bottom row of the numbers and move up until the first digit of the number is matched.
+
+While the first digit matches:
+	- Start moving left to match the second number matches.
+When both digits are correct:
+	- STOP! 
+	- Press the level number
+	- Say “Thank you, come again!”
+
+
+
+Release 1: Brushing your teeth
+
+Walk into bathroom:
+
+Is the cabinet open?
+	- If yes, grab toothbrush
+	- If no, open the cabinet 
+While the cabinet is open:
+	- Grab toothpaste
+	- Place toothpaste on toothbrush
+Is your mouth open?
+	- If yes, put toothbrush into left side of mouth
+	- If no, open mouth 
+		- put toothbrush into left side of mouth
+While toothbrush is in mouth:
+	- Brush up
+	- Brush down
+	- Brush right
+When right side of mouth:
+	- Spit out toothpaste into sink
+Does your mouth feel clean?
+	- If yes, end teeth brushing session
+	- If no, repeat!
+	
+	
+
+	
