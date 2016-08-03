@@ -1,7 +1,6 @@
 Elevator Algorithm:
 
 Robot walks into the elevator:
-
 While the robot is in the elevator:
 	- Ask, “What level are you going to?”
 	- If no answer, ask again: “What level are you going to?”
@@ -20,7 +19,6 @@ When both digits are correct:
 Release 1: Brushing your teeth
 
 Walk into bathroom:
-
 Is the cabinet open?
 	- If yes, grab toothbrush
 	- If no, open the cabinet 
