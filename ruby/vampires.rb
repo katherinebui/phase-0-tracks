@@ -74,6 +74,7 @@ elsif name == "Drake Cula" || "Tu Fang"
   results = def_vampire
   puts "Who are you trying to kid? YOU ARE TOTALLY A VAMPIRE!"
 else puts "Results inconclusive"
+
 end
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
