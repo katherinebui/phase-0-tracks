@@ -41,16 +41,18 @@ p  client_information
 p "Do you want to change any information? Type 'none' if nothing needs to be changed."
 changed_key = gets.chomp # gets the key
 changed_key = changed_key.to_sym # changes the string into a variable
-  if changed_key == "none" 
+  if changed_key == "none" # if no, just move on
   end
 
 p "Enter new information"
-changed_value = gets.chomp 
-update_client_information = {}
-update_client_information[changed_key] = changed_value
+changed_value = gets.chomp # get the updated information
+update_client_information = {} # store new information in new hash
+update_client_information[changed_key] = changed_value 
 
+# merge the two and update
 client_information.update(update_client_information)
 
+# print the new information
 p client_information
 
 
