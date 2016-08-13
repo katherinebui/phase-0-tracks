@@ -1,4 +1,5 @@
-#paired with jason warholic
+# paired with jason warholic
+# hashes and arrays - .each and .map
 
 #release 0 
 def hello
@@ -113,9 +114,6 @@ hash4 = { "a" => 1, "b" => 2, "c" => 3, "d" => 4, "e" => 5 }
 new_hash = hash4.length
 hash4.delete_if { |key, value| value < new_hash - 2}
 p hash4
-
-
-
 
 
 

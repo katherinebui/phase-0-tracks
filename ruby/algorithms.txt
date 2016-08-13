@@ -40,4 +40,4 @@ When right side of mouth:
 Does your mouth feel clean?
 	- If yes, end teeth brushing session
 	- If no, repeat!
-	
+STOP HERE!
