@@ -1,0 +1,20 @@
+Name at least three categories of CSS adjustments (example: colors)?
+font-size, font-family, text-transformation
+
+What are the three ways to link a CSS rule to an HTML document? Which one is the best and why?
+You could either link the CSS style sheet to HTML document (external), embed your CSS in the HTML document - using <style> inside <head> (internal), or adding CSS properties to the HTML <inline>
+
+Thank you http://www.w3schools.com/css/css_howto.asp :)
+
+What is a selector? Give examples of at least three types of selectors.
+A selector allows the developer to select the piece of information that you want to style. Some examples are: .class, #id, and div, p
+
+What is the box model?
+A box that wraps around an HTML element. It includes elements like padding and border. It is a way to split up content to make your website look more organize.
+
+Explain and give an example of the cascading effect of CSS.
+CSS allows people to arrange and rearrange parts of their website. It allows developers to style different elements in the HTML. It consists of guidelines/rules to tell elements how to look. The cascading part of CSS refers to the hierarchy of elements. CSS is supposed to determine the hierarchy of elements-what the child element gets from it’s parent element and what is just unique to the child. An example is div > p 
+
+Name two CSS techniques that assist in responsive design.
+Adding media queries: helps with scaling to different screen sizes
+Fluid-width design: putting conditions on the elements for it to look beautiful on different browser windows

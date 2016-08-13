@@ -1,0 +1,53 @@
+Variables
+1. What is a variable? Why might a programmer use a variable?
+A variable stores information and is used to reference throughout the program. It also allows programmers to label certain pieces of information. A programmer uses a variable to store information/give it value. They are able to set the value. It is an element that can be changes and adapt to different pieces of information to create new information. 
+
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+The right side values will be replaces with the information (in this case it is the first and last name). It goes from right to left. The final result will be full_name = “AbrahamLincoln”
+
+
+Data Types
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+	•	string: text, strings of characters, a book title or the country that you live in
+	•	integer: number we count with, it can be used to represent the date, how many dogs you have
+	•	float: decimal numbers, when you are adding money
+	•	nil: nothing, no value, you can use it when you have no data to put for that certain question
+	•	boolean: true or false values, can use to answer questions like, do you have a dog? are you alive?
+
+
+Algorithms
+4. What is an algorithm?
+steps for an operation. it’s a detailed map, stating step by step, to calculate how a certain task can be performed
+
+5. What are two common categories of algorithm in computer science?
+the first one is searching - finding a keyword match, the second one is sorting -alphabetizing lists, and the third one is finding the shortest path between two points 
+
+
+Methods
+6. What is a method? Why might a programmer choose to use a method? A method is code that can be reused to do a certain task.  Programmers use methods when they have tasks in their code that need to be done over and over again. 
+
+7. Define the following terms as they relate to a method. 
+	•	return value: gives you a result of the method
+	•	side effect: methods that don’t return anything, i.e. puts
+	•	parameter: a value that the method expects you to pass when it is called
+	•	argument: the value you pass to a method parameter when you call the method
+	•	implicit return: the last evaluated expression in a method is the return value of that method
+
+
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+Global scope: information that is available everything in your code vs. method scope: local scope - the piece of information is available only in the method. Both impact the availability of the data because only certain things are only visible in that specific place. While one is able to be accessed anywhere in the code, other are placed specifically and restricted to other pieces of code.
+
+
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control?
+control flow are while and until statements. it allows code to be repeated under condition that are set up the programmer. it also allows the programmer to control when it stop and when to start. programmers might choose to use flow control because things can be it can be run repeatedly without a long piece of code.
+
+10. Define the following terms as they relate to flow control.
+	•	loop: runs the same block of code under conditional statements repeatedly
+	•	if: start of a conditional statement, place one conditional statement here
+	•	else: the other end of the conditional statement 
+	•	elsif: when there are more than two conditional statements, it is placed between if and else - can use it multiple times
+	⁃	all three are used for true or false expressions
+	•	while: runs the code WHILE the condition that it is true, it iterates while the condition is true, runs until the condition is false
+	•	until: runs the code UNTIL the condition is true
