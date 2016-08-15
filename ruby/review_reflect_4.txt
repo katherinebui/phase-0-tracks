@@ -1,0 +1,37 @@
+Data Structures
+1. Why are data structures useful in programming?
+Data structures are useful because it is a great way to organize information. It gives you both input and output - a great way to store information. I compare it to a library. It helps people find what they are looking for way and it is easy to access.
+
+Arrays
+2. Define "array" and describe the characteristics of an array.
+An array is list or a collection of objects (data structure). It covered in [], can be a list of different things - integers, strings, or anything that has a defined data type. You can call methods n arrays (.first, .last). To access items in an array, you can use the index position (starts at 0).
+
+3. Give two original examples of data sets that an array might be well-suited for.
+flowers = [“roses”, “daises”, “peonies”, “grass”]
+game_of_thrones_characs = [“Daenerys Targaryen”, “Jon Snow”, “Arya Stark”, “Cersei Lannister”, “Sansa Stark”]
+
+Hashes
+4. Define "hash" and describe the characteristics of a hash.
+A data structure that has keys and values. It is a collection of information that has pairs of key => value (like a dictionary?). It is similar to an array, but arrays uses integers as index. Hash are covered in {}. Each value has a unique key. You can access hashes like hash[:key]. There are a number of methods that you can call on a hash (i.e. .clear, .delete). 
+
+5. Give two original examples of data sets that a hash might be well-suited for.
+pasta_shapes = {spaghetti => “thin and long”, trecce => “long spiral”, farfalle => “bowtie”, penne => “log with stripes” }
+caffeine_mg = {red_bull => 80, coffee => 95, green_tea => 35, c_4 => 200}
+
+Iteration
+6. Why is iteration useful?
+It is important because it allows you to look for the information you need in data structures. In loops, iterations help programmers to write non-repetitive code - simplifying the code and making it easier to read. It can also be used to perform specific task and pretty much takes place everywhere in programming.
+
+7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+Going through a grocery checkout list to see if the item is bought! 
+
+
+Blocks
+8. What is a block?
+It is a grouping of statements, code that you put inside do and end or in {}. It is a code that makes up a small program. 
+
+http://mixandgo.com/blog/mastering-ruby-blocks-in-less-than-5-minutes
+
+9. What is a block parameter, and where does its value come from?
+The block parameter is placed in the ||. The value of the block parameter depends on the method that is being called. For example, if it is an array and you’re iterating through it with .each, the value of the parameter is each item in the list.
+
