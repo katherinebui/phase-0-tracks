@@ -76,9 +76,14 @@ update("icecream", 1)
 print
 
 
-
-
-
+# Reflection
+# I learned that the more time spent on pseudocode, the easier it  will be to actually code it all out.
+# I guess just converting from hash to array and vice versa took a bit of time, but it all made sense
+# Methods will return the value of the last statement
+# Your parameters set what you can pass in as arguments - strings, arrays, etc.
+# You can use instance variables in different methods throughout a class
+# I learned the use of instance variables - scope made more sense
+# I need to practice writing more methods, it still gets me in a frenzy here and there
 
 
 
