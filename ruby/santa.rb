@@ -1,13 +1,13 @@
 class Santa
-  attr_reader :age, :ethnicity
-  attr_accessor :gender
+  attr_reader :age
+  attr_accessor :gender, :ethnicity
 
 def initialize(genders, ethnicities)
   p "Initializing Santa instance ..."
-  @gender = genders
-  @ethnicity = ethnicities
+  @gender =  ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"].sample
+  @ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"].sample
   @reindeer_ranking =  ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-  @age = 0
+  @age = rand(0..140)
 end
 
 def celebrate_birthday(year)
@@ -56,15 +56,17 @@ end
 # p "Flappy's age is: #{flappy.age} and ethnicity is #{flappy.ethnicity}."
 # p flappy.gender=("awesome")
 
+8.times.collect {
+random_santas = Santa.new(@gender, @ethnicity)
+}
 
 
-santas = []
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
 
-
+# 8.times.collect {
+# santas = []
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# random_santas = Santa.new(example_genders.sample, example_ethnicities.sample)
+# }
 
 
