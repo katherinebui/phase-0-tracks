@@ -66,20 +66,27 @@ Charles.coo(4)
 
 
 
-baby_list = 50.times.collect{Baby.new}
-def baby_cry(list)
-    list.each do
-    p "hello"
-    end
-end
+# baby_list = 50.times.collect{Baby.new}
+# def baby_cry(list)
+#     list.each do
+#     p "hello"
+#     end
+# end
     
-baby_cry(baby_list)
+# baby_cry(baby_list)
 
-baby_list.map!(&:cry)
-
-
+# baby_list.map!(&:cry)
 
 
+baby_list = []
+50.times do |baby|
+  baby_list << Baby.new
+end
+#p baby_list
+baby_list.each do |baby|
+  baby.cry
+  baby.coo(2)
+end
 
 
 
