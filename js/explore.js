@@ -10,19 +10,20 @@
 //   - need to move backwards on index positions (i--)
 // Print the result to the screen
 
-// var reverse = function(string){
-//   str = string.split("");
-//   for(var i = str.length; i >= 0; i--){
-//   console.log(str[i]);
-// }
-// };
-
-// reverse("hello");
 
 var reverse = function(string){
   for(var i = string.length; i >= 0; i--){
-  console.log(string[i]);
+  var backward = "";
+  backward += string[i]
+  console.log(backward);
 }
 };
 
-reverse("hello");
+firstAttempt = reverse("hello world!");
+
+if (1==1){
+  console.log(firstAttempt)
+} else {
+  console.log("Goodbye!")
+}
+
