@@ -87,6 +87,40 @@ console.log(match(pets, wildAnimals));
 // console.log(pets[Object.keys(pets)[0]]);
 
 
+// Release 2 : Random Test Data
+// Random function that takes in a length and populates an array with random words of that length
+// Have to generate random number
+// While loop?
+// For loop?
+// WHAT LOOP?!
+
+function random(length){
+  var array = [];
+  var index = 0;
+  var alphabet = ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  while(index < length){
+    index += 1;
+    var finalString = "";
+    // set final string inside loop because it needs to reset every time it adds a letter
+    for(var i = 0; i < Math.floor((Math.random() * 10) + 1); i++){
+      var letter = alphabet[Math.floor((Math.random() * 26) + 1)];
+      finalString += letter;
+    }
+  array.push(finalString);
+  }
+  console.log(array);
+  return array;
+}
+
+console.log(random(3));
+
+
+// 10 x Generate an array
+// Feed array to longest function
+// Print results
+for(i = 0; i < 10; i++){
+longest(random(7));
+  }
 
 
 
