@@ -1,0 +1,35 @@
+1. Display the information in one table (either table is fine).
+sqlite> .mode column
+sqlite> .header on
+sqlite> SELECT * FROM songs;
+id          title           artist       year        early2000   genre_id  
+----------  --------------  -----------  ----------  ----------  ----------
+1           Knock You Down  Keri Hilson  2009        false       1         
+2           Buy U A Drank   T Pain       2007        false       2         
+3           Always On Time  Ja Rule      2001        true        1         
+4           Can't Let You   Fabolous     2003        true        1         
+5           Southside       Lloyd        2004        true        1         
+6           Best I Ever Ha  Drake        2009        true        1         
+7           The New Workou  Kanye West   2004        true        2         
+8           Ms. Jackson     OutKast      2000        true        2  
+       
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+sqlite> UPDATE songs SET early2000="false"  WHERE id=6;
+sqlite> SELECT * FROM songs;
+id          title           artist       year        early2000   genre_id  
+----------  --------------  -----------  ----------  ----------  ----------
+1           Knock You Down  Keri Hilson  2009        false       1         
+2           Buy U A Drank   T Pain       2007        false       2         
+3           Always On Time  Ja Rule      2001        true        1         
+4           Can't Let You   Fabolous     2003        true        1         
+5           Southside       Lloyd        2004        true        1         
+6           Best I Ever Ha  Drake        2009        false       1         
+7           The New Workou  Kanye West   2004        true        2         
+8           Ms. Jackson     OutKast      2000        true        2    
+
+3. Display the information in both tables using one query.
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
