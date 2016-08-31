@@ -114,15 +114,20 @@ The New Workou  2004        other
 Ms. Jackson     2000        other  
 
 
-sqlite> SELECT songs.year, genre.type FROM songs INNER JOIN genre on songs.genre_id = genre.id;
-year        type      
-----------  ----------
-2009        love song 
-2007        other     
-2001        love song 
-2003        love song 
-2009        love song 
-2004        other     
-2000        other   
+sqlite> SELECT songs.title, songs.year, genre.type FROM songs LEFT JOIN genre on songs.genre_id = genre.id WHERE genre.type="love song";
+title           year        type      
+--------------  ----------  ----------
+Knock You Down  2009        love song 
+Always On Time  2001        love song 
+Can't Let You   2003        love song 
+Best I Ever Ha  2009        love song 
+
+
+sqlite> SELECT songs.title, songs.year, genre.type FROM songs INNER JOIN genre on songs.genre_id = genre.id WHERE genre.type="other";
+title          year        type      
+-------------  ----------  ----------
+Buy U A Drank  2007        other     
+The New Worko  2004        other     
+Ms. Jackson    2000        other   
 
 
