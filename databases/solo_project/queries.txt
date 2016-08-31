@@ -1,0 +1,133 @@
+Note: .mode column, .header on
+
+RELEASE 0-2
+1. Display the information in one table (either table is fine).
+sqlite> .mode column
+sqlite> .header on
+sqlite> SELECT * FROM songs;
+id          title           artist       year        early2000   genre_id  
+----------  --------------  -----------  ----------  ----------  ----------
+1           Knock You Down  Keri Hilson  2009        false       1         
+2           Buy U A Drank   T Pain       2007        false       2         
+3           Always On Time  Ja Rule      2001        true        1         
+4           Can't Let You   Fabolous     2003        true        1         
+5           Southside       Lloyd        2004        true        1         
+6           Best I Ever Ha  Drake        2009        true        1         
+7           The New Workou  Kanye West   2004        true        2         
+8           Ms. Jackson     OutKast      2000        true        2  
+       
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+sqlite> UPDATE songs SET early2000="false"  WHERE id=6;
+sqlite> SELECT * FROM songs;
+id          title           artist       year        early2000   genre_id  
+----------  --------------  -----------  ----------  ----------  ----------
+1           Knock You Down  Keri Hilson  2009        false       1         
+2           Buy U A Drank   T Pain       2007        false       2         
+3           Always On Time  Ja Rule      2001        true        1         
+4           Can't Let You   Fabolous     2003        true        1         
+5           Southside       Lloyd        2004        true        1         
+6           Best I Ever Ha  Drake        2009        false       1         
+7           The New Workou  Kanye West   2004        true        2         
+8           Ms. Jackson     OutKast      2000        true        2    
+
+
+
+3. Display the information in both tables using one query.
+sqlite> SELECT * FROM songs, genre WHERE songs.genre_id = genre.id;
+id          title           artist       year        early2000   genre_id    id          type      
+----------  --------------  -----------  ----------  ----------  ----------  ----------  ----------
+1           Knock You Down  Keri Hilson  2009        false       1           1           love song 
+2           Buy U A Drank   T Pain       2007        false       2           2           other     
+3           Always On Time  Ja Rule      2001        true        1           1           love song 
+4           Can't Let You   Fabolous     2003        true        1           1           love song 
+5           Southside       Lloyd        2004        true        1           1           love song 
+6           Best I Ever Ha  Drake        2009        false       1           1           love song 
+7           The New Workou  Kanye West   2004        true        2           2           other     
+8           Ms. Jackson     OutKast      2000        true        2           2           other    
+
+ 
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+sqlite> SELECT songs.title, songs.year, genre.type FROM songs JOIN genre ON songs.genre_id = genre.id;
+title           year        type      
+--------------  ----------  ----------
+Knock You Down  2009        love song 
+Buy U A Drank   2007        other     
+Always On Time  2001        love song 
+Can't Let You   2003        love song 
+Southside       2004        love song 
+Best I Ever Ha  2009        love song 
+The New Workou  2004        other     
+Ms. Jackson     2000        other   
+
+
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+sqlite> DELETE FROM songs WHERE id=5;
+sqlite> SELECT * FROM songs;
+id          title           artist       year        early2000   genre_id  
+----------  --------------  -----------  ----------  ----------  ----------
+1           Knock You Down  Keri Hilson  2009        false       1         
+2           Buy U A Drank   T Pain       2007        false       2         
+3           Always On Time  Ja Rule      2001        true        1         
+4           Can't Let You   Fabolous     2003        true        1         
+6           Best I Ever Ha  Drake        2009        false       1         
+7           The New Workou  Kanye West   2004        true        2         
+8           Ms. Jackson     OutKast      2000        true        2     
+
+
+RELEASE 3 
+1. There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed? Can you bookmark any good diagrams that will help you tell different joins apart in the future?
+- natural join: naturally join by common columns. (i.e. same name) natural join can be inner join, a left outer join, or a right outer join.
+- inner join: require at least a match when comparing two tables
+- left join: returns all rows from the first(left) with the matching rows in the second(right) table, result in null if no match
+- right join: returns all rows from the second(right) table, and the matched rows from the first(left) table
+- full join: returns all rows when there is a match in one of the tables
+
+http://www.w3schools.com/sql/sql_join.asp
+http://www.sql-join.com/
+
+
+2. 
+sqlite> SELECT songs.artist, songs.title, genre.type FROM songs INNER JOIN genre on songs.genre_id = genre.id;
+artist       title           type      
+-----------  --------------  ----------
+Keri Hilson  Knock You Down  love song 
+T Pain       Buy U A Drank   other     
+Ja Rule      Always On Time  love song 
+Fabolous     Can't Let You   love song 
+Drake        Best I Ever Ha  love song 
+Kanye West   The New Workou  other     
+OutKast      Ms. Jackson     other    
+
+
+sqlite> SELECT songs.title, songs.year, genre.type FROM songs LEFT JOIN genre on songs.genre_id = genre.id;
+title           year        type      
+--------------  ----------  ----------
+Knock You Down  2009        love song 
+Buy U A Drank   2007        other     
+Always On Time  2001        love song 
+Can't Let You   2003        love song 
+Best I Ever Ha  2009        love song 
+The New Workou  2004        other     
+Ms. Jackson     2000        other  
+
+
+sqlite> SELECT songs.title, songs.year, genre.type FROM songs LEFT JOIN genre on songs.genre_id = genre.id WHERE genre.type="love song";
+title           year        type      
+--------------  ----------  ----------
+Knock You Down  2009        love song 
+Always On Time  2001        love song 
+Can't Let You   2003        love song 
+Best I Ever Ha  2009        love song 
+
+
+sqlite> SELECT songs.title, songs.year, genre.type FROM songs INNER JOIN genre on songs.genre_id = genre.id WHERE genre.type="other";
+title          year        type      
+-------------  ----------  ----------
+Buy U A Drank  2007        other     
+The New Worko  2004        other     
+Ms. Jackson    2000        other   
+
+
