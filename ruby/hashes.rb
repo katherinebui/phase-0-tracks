@@ -3,6 +3,10 @@
 # need: client's name, age, number of children, 
 # decor theme, dogs (boolean), favorite color(string), ideal # of rooms
 
+
+# initalize hash
+client_information = {}
+
 # set a loop
 loop do 
 # prompt name
