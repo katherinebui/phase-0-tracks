@@ -1,0 +1,28 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+
+class: blueprint where individual objects are created, classes set guidelines for characteristics and the behavior
+state: the characteristics of each instance, the attributes
+behavior: methods, tells how the object to act
+instance variable: member of a class, is defined in a class, they are accessible across methods. Instance variables start with an @ symbol  
+instance method: use when you need you want a particular instance of a class to behave a certain way. you can’t use instance methods on class, only on instances. Methods that work on instance variables
+
+2. What are attributes?
+Attributes are characteristics of a class. Can be added inside a class declaration. They can change or stay the same. Each instance as it’s own characteristics.
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+Shoe: size, width, colors, lace color
+size, width, colors, and lace color are all characteristics that I would like to know when buying a shoe - or helping others look for the correct shoe
+
+4. What is the purpose of the initialize method? When does it run?
+It set defaults values into instance variables. It creates argument that you can create instances for that class. It gives you a template of what that class is looking for. It runs in the beginning of the program. 
+
+http://www.rubyist.net/~slagell/ruby/objinitialization.html
+
+5. What are modules?
+A collection of methods and constants. You use one when you have to repeatedly define a method. It compartmentalizes methods and help developers write simpler code. It’s a way to organize the same used methods together, so they can be used together when is need throughout the program. 
+
+6. What are the different ways you can use a module?
+Namespacing: helps you compartmentalize different versions of the same method and don’t have to worry about over writing other methods
+Mixins  - they are mixed in to classes to give classes some functions
+http://phrogz.net/programmingruby/tut_modules.html
+
