@@ -7,8 +7,6 @@
 # initalize hash
 client_information = {}
 
-# set a loop
-loop do 
 # prompt name
   p "Enter a name:"
   name = gets.chomp
@@ -51,6 +49,7 @@ loop do
   end
 
 # ask if the user wants to change anything
+while TRUE
   p "Is there anything you would like to change? Please enter the key or type 'exit'"
   changeKey = gets.chomp
   break if changeKey == "exit" # break the program if the user types 'exit'
@@ -66,7 +65,7 @@ loop do
   p "Here is your updated information:"
     client_information.each do |key, value|
     p "#{key}: #{value}"
-  end
+end
 end
 
 
