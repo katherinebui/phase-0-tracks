@@ -3,50 +3,62 @@
 # need: client's name, age, number of children, 
 # decor theme, dogs (boolean), favorite color(string), ideal # of rooms
 
-#
+# set a loop
 loop do 
+# prompt name
   p "Enter a name:"
   name = gets.chomp
-  client_information[:name] = name
+  client_information[:name] = name # store value into hash
 
+# prompt age
   p "Enter an age:"
   age = gets.chomp
-  client_information[:age] = age
+  client_information[:age] = age # store value into hash
 
+# prompt number of children
   p "How many children do you have?"
   numOfChild = gets.chomp
-  client_information[:numOfChild] = numOfChild
+  client_information[:numOfChild] = numOfChild # store value into hash
 
+# prompt decoration theme
   p "What is your decoration theme?"
   decorTheme = gets.chomp
-  client_information[:decorTheme] = decorTheme
+  client_information[:decorTheme] = decorTheme # store value into hash
 
+ # prompt number of dogs 
   p "How many dogs do you have?"
   dogs = gets.chomp
-  client_information[:dogs] = dogs
+  client_information[:dogs] = dogs # store value into hash
 
+# prompt favorite color
   p "What is your favorite color?"
   color = gets.chomp
-  client_information[:color] = color
+  client_information[:color] = color # store value into hash
 
+# prompt number of rooms 
   p "How many rooms would you like?"
   rooms = gets.chomp
-  client_information[:rooms] = rooms
+  client_information[:rooms] = rooms # store value into hash
 
+# iterate through hash to print 
   p "Here are all of the client's information:"
     client_information.each do |key, value|
     p "#{key}: #{value}"
   end
 
+# ask if the user wants to change anything
   p "Is there anything you would like to change? Please enter the key or type 'exit'"
   changeKey = gets.chomp
-  break if changeKey == "exit"
-  changeKey = changeKey.to_sym
+  break if changeKey == "exit" # break the program if the user types 'exit'
+  changeKey = changeKey.to_sym # change the key into value to access hash correctly
+# if user wants to change the key, ask for value after
   p "Please enter the value you would like to change"
-  changeValue = gets.chomp
+  changeValue = gets.chomp 
+# if them another chance to exit?
   break if changeKey == "exit"
+# update change value and changed key
   client_information[changeKey] = changeValue
-
+# print the updated information
   p "Here is your updated information:"
     client_information.each do |key, value|
     p "#{key}: #{value}"
@@ -115,6 +127,8 @@ end
 
 
 # -----------------------------------------------------------
+
+
 
 # #initialize hash
 # client_information = {}
