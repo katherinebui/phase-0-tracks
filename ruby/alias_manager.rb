@@ -47,6 +47,28 @@ end
 
 # spy_name("kathy bui")
 
+# setting an empty hash
+all_names = {}
+# asks user for their name and prompts to get an answer
+# set loop until quit is inputted
+
+while TRUE 
+puts "What is your name? Type 'quit' to exit the program."
+agent_name = gets.chomp
+# quit to break the program
+break if agent_name == "quit"
+# places real name and spy name in the hash
+all_names[agent_name] = spy_name(agent_name)
+p spy_name(agent_name)
+  # all_names[agent_name] = spy_name(agent_name)
+end 
+
+# prints out the results of real name and spy name
+p "This is top secret data! No one must see this but you:" 
+  all_names.each do |org, fake|
+  p "#{org}: #{fake}"
+end
+
 
 
 
