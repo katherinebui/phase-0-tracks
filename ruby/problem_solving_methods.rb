@@ -66,7 +66,7 @@ def fib(number)
   index = 0  # start loop to run thru the whole array
   while index < array.length - 1 # doesn't want to include the last sum
     sum = new_array[-1] + new_array[-2] # index positions of the last two #
-    new_array << sum # pushing the new number into the new array
+    new_array << sum # pushing the new number into the new
     index += 1 # no infinite loops please
   end
     
@@ -108,7 +108,8 @@ p bubble_sort(array)
 a = [1, 2, 4, 6, 3, 7, 4, 9]
 p bubble_sort(a)
 
- 
+cool = [7, 3, 6, 9, 0, 3]
+p bubble_sort(cool)
 
 
 
