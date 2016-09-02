@@ -69,6 +69,62 @@ p drop
 
 
 
+# HASH
+
+his_info = {
+  name: "Dino",
+  eyes: "blue",
+  location: "Los Angeles",
+  dogs: 1,
+  hungry: true
+}
+
+# A method that iterates through the items, 
+# deleting any that meet a certain condition 
+his_info.delete_if { |label, data| label == :dogs }
+p his_info
+
+
+his_info = {
+  name: "Dino",
+  eyes: "blue",
+  location: "Los Angeles",
+  dogs: 1,
+  hungry: true
+}
+
+# A method that filters a data structure for only 
+# items that do satisfy a certain condition
+his_info.select! { |label, data| label == :name}
+p his_info
+
+
+clothes = {
+  top: "pink shirt",
+  pants: "jeans",
+  hat: true,
+  shoes: "Nikes",
+  socks: "purple"
+}
+
+# A different method that filters a data structure
+# for only items satisfying a certain condition
+clothes.keep_if { |label, data| data == true }
+p clothes
+
+clothes = {
+  top: "pink shirt",
+  pants: "jeans",
+  hat: true,
+  shoes: "Nikes",
+  socks: "purple"
+}
+
+# A method that will remove items from a data structure 
+# until the condition in the block evaluates to false, then stops
+clothes.delete_if { |label, data| label == :pants }
+p clothes
+
 
 
 
