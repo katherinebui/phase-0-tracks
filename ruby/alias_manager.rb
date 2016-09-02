@@ -12,6 +12,40 @@ end
 
 
 
+def spy_name(string)
+  
+string = string.downcase # to keep everything even
+
+swap(string) # used the method above
+
+vowels = "aeioua".chars # edge cases by adding beginning at the end
+consonants = "bcdfghjklmnpqrstvwxyzb".chars
+
+# setting loops to find string index in vowel and consonants
+  result = "" # empty string to store new info
+  index = 0 
+  while index < string.length
+# if string does not carry a vowel and consonant, return space    
+   if !vowels.include?(string[index]) && !consonants.include?(string[index])
+    result << " "
+# if the string does include a vowel, use the next vowel in the array
+  elsif vowels.include?(string[index])
+    next_vowel = vowels[vowels.index(string[index]) + 1] 
+# place the new letter in the result
+    result << next_vowel
+# if the sting does include a consonant, use the next letter in the array
+  else consonants.include?(string[index])
+  next_cons = consonants[consonants.index(string[index]) + 1]
+# place the new letter in the result
+    result << next_cons
+  end
+# no infinite loops pelase
+  index += 1 
+end
+  return result 
+end
+
+# spy_name("kathy bui")
 
 
 
