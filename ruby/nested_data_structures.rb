@@ -37,6 +37,19 @@ runway = {
 }
 
 
+p runway[:Dino].key("blue").equal? :shoes # => true
+p runway[:Maheen].push("black stripe") # => ["red stripe", "blue stripe", "white stripe", "black stripe"]
+p runway[:Jenny].empty? # => false
+p runway[:Bryan].delete("one shoe")
+  p runway[:Bryan] # => ["yellow shirt", "ugly hat"]
+p runway[:Dino].keys # => [:dress, :shoes, :pants]
+p runway[:Tom].push("pantless") # => ["shirtless", "pantless"]
+p runway[:Norma].fetch(:pants) # => "black"
+p runway[:Ana].has_value?("purple") # => true
+p runway.length # => 8
+p runway[:Ana].select! { |clothes, detail| clothes == :hat} # => {:hat=>"polka dots"}
+
+
 
 
 
