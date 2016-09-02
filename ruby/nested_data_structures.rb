@@ -1,3 +1,50 @@
+# please ignore the code after the line, I'm redo-ing the assignment for more practice!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --------------------------------------------- 
 # A classroom full of desks full of supplies 
 
 # build a hash for classroom
