@@ -39,6 +39,35 @@ my_info.map {|info, data| p "#{info}".swapcase}
 
 
 
+# release 2
+
+# ARRAY
+# A method that iterates through the items, 
+# deleting any that meet a certain condition 
+colors = ["red", "purple", "orange", "green", "pink"]
+colors.delete_if { |color| color.length <= 4 }
+p colors
+
+# A method that filters a data structure for only 
+# items that do satisfy a certain condition
+colors = ["red", "purple", "orange", "green", "pink"]
+less_than = colors.select { |color| color.length == 6 }
+p less_than
+# colors.select! { |color| color.length == 5 }
+
+# A different method that filters a data structure
+# for only items satisfying a certain condition
+numbers = [1,2,3,4,5,6,7,8]
+take = numbers.take_while { |number| number <= 3 }
+p take
+
+# A method that will remove items from a data structure 
+# until the condition in the block evaluates to false, then stops
+numbers = [1,2,3,4,5,6,7,8]
+drop = numbers.drop_while { |number| number < 7 }
+p drop
+
+
 
 
 
