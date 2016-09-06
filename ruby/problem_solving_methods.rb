@@ -10,16 +10,32 @@
 #   end
 # end
 
-def search_array(array, number)
+# def search_array(array, number)
 # checks if the array includes the number 
-  array.each do |element|
-    if array.include?(number) # check if the number is included in the array
-      return array.find_index(number) # find the index of number
-    else !array.include?(number) # if not included return nil
-     return nil
+#   array.each do |element|
+#     if array.include?(number) # check if the number is included in the array
+#       return array.find_index(number) # find the index of number
+#     else !array.include?(number) # if not included return nil
+#      return nil
+#     end
+#   end
+# end
+
+def search_array(array, number)
+  new_array = []
+  index = 0
+  while index < array.length
+    array.each do |element|
+      new_array << element
+      if new_array.include?(number)
+        return new_array.length - 1
+      end
     end
+  index += 1
   end
+
 end
+
 
 
 array = [1, 3, 5, 7, 9, 19, 56]
