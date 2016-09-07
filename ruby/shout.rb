@@ -6,13 +6,13 @@ module Shout
   end
 
   def self.yell_happily(words)
-    words + " :D"    
+    words.upcase + "!" + " :D"    
   end
 end
 
 
-
-
+Shout.yell_happily("hello")
+Shout.yell_angrily("f u")
 
 
 
