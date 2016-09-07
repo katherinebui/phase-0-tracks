@@ -7,12 +7,12 @@ class Santa
   # attr_accessor :gender
   attr_reader :age, :ethnicity, :gender
 
-  def initialize(gender, ethnicity)
+  def initialize
     # p "Initializing Santa instance ..."
-    @gender = gender
-    @ethnicity = ethnicity
+    @gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"].sample
+    @ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"].sample
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = 0
+    @age = rand(0..140)
   end
 
   def speak
@@ -33,30 +33,30 @@ class Santa
     end
   end
 
-# setter methods for attributes to make writable
-  def gender=(new_gender)
-    @gender = new_gender
-  end
+# # setter methods for attributes to make writable
+#   def gender=(new_gender)
+#     @gender = new_gender
+#   end
 
-# getter methods for attributes to make readable
-  def age
-    @age
-  end
+# # getter methods for attributes to make readable
+#   def age
+#     @age
+#   end
 
-  def ethnicity
-    @ethnicity
-  end
+#   def ethnicity
+#     @ethnicity
+#   end
 
 end
 
 
-santas = []
-santas << Santa.new("N/A", "N/A")
-santas << Santa.new("agender", "Latino")
-santas << Santa.new("male", "Asian")
-santas << Santa.new("bigender", "black")
-santas << Santa.new("female", "unicorn")
-p santas
+# santas = []
+# santas << Santa.new("N/A", "N/A")
+# santas << Santa.new("agender", "Latino")
+# santas << Santa.new("male", "Asian")
+# santas << Santa.new("bigender", "black")
+# santas << Santa.new("female", "unicorn")
+# p santas
 
 # santas = []
 # example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -65,7 +65,7 @@ p santas
 #   santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 
-winnie = Santa.new("female", "unknown")
+# winnie = Santa.new("female", "unknown")
 # winnie.get_mad_at("Vixen")
 # p winnie
 
@@ -74,7 +74,10 @@ winnie = Santa.new("female", "unknown")
 # p winnie.celebrate_birthday(23)
 
 
-
+10.times.collect do |santa|
+   random = Santa.new
+   p random
+end
 
 
 
