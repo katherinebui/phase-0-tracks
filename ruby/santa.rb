@@ -50,6 +50,16 @@ class Santa
 end
 
 
+# should print out the attributes of each Santa using the
+# instance methods that give you access to that data.
+10.times.collect do |santa|
+   random = Santa.new
+   puts "This santa is #{random.gender} and #{random.ethnicity}"
+   p "This santa is #{random.age} years old"
+end
+
+
+
 # santas = []
 # santas << Santa.new("N/A", "N/A")
 # santas << Santa.new("agender", "Latino")
@@ -72,12 +82,6 @@ end
 # p winnie.gender = "N/A"
 # p winnie.ethnicity
 # p winnie.celebrate_birthday(23)
-
-
-10.times.collect do |santa|
-   random = Santa.new
-   p random
-end
 
 
 
