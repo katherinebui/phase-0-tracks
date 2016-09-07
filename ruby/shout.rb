@@ -1,23 +1,46 @@
 # please ignore everything below the line. I am re-doing the assignment for practice!
 
+# module Shout
+#   def self.yell_angrily(words)
+#     words + "!!!" + " :("
+#   end
+
+#   def self.yell_happily(words)
+#     words.upcase + "!" + " :D"    
+#   end
+# end
+
+
+# Shout.yell_happily("hello")
+# Shout.yell_angrily("f u")
+
+
 module Shout
-  def self.yell_angrily(words)
+  def yell_angrily(words)
     words + "!!!" + " :("
   end
 
-  def self.yell_happily(words)
+  def yell_happily(words)
     words.upcase + "!" + " :D"    
   end
 end
 
+class Human
+  include Shout
+end
 
-Shout.yell_happily("hello")
-Shout.yell_angrily("f u")
+class Dog
+  include Shout
+end
+
+human = Human.new
+p human.yell_angrily("wtf man")
+p human.yell_happily("i love you")
 
 
-
-
-
+dog = Dog.new
+p dog.yell_angrily("GRRRRRRRRRRRR! *bites*")
+p dog.yell_happily("bark bark bark, *licks*")
 
 
 
