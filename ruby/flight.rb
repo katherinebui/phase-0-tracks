@@ -4,6 +4,9 @@ module Flight
   end
 end
 
+# module placement = above classes
+# self is not used in mixin modules
+
 class Bird
   include Flight
 end
