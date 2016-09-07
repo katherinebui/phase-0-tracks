@@ -21,24 +21,56 @@ class Santa
     p "That was a good #{cookie}" 
   end
 
+  def celebrate_birthday(age)
+    @age = age + 1
+  end
+
+  def get_mad_at(name)
+    if @reindeer_ranking.include?(name)
+      @reindeer_ranking.insert(-1, @reindeer_ranking.delete(name))
+    end
+  end
+
+# setter methods for attributes to make writable
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+# getter methods for attributes to make readable
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
 end
 
 
 santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not to say")
-santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 santas << Santa.new("N/A", "N/A")
+santas << Santa.new("agender", "Latino")
+santas << Santa.new("male", "Asian")
+santas << Santa.new("bigender", "black")
+santas << Santa.new("female", "unicorn")
+p santas
 
-santas = []
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+# santas = []
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# example_genders.length.times do |i|
+#   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
+
+winnie = Santa.new("female", "unknown")
+# winnie.get_mad_at("Vixen")
+# p winnie
+
+# p winnie.gender = "N/A"
+# p winnie.ethnicity
+# p winnie.celebrate_birthday(23)
+
 
 
 
