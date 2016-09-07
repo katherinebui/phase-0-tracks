@@ -4,6 +4,8 @@
 # you can make an instance variable anywhere not just in init
 
 class Santa
+  # attr_accessor :gender
+  attr_reader :age, :ethnicity, :gender
 
   def initialize(gender, ethnicity)
     # p "Initializing Santa instance ..."
