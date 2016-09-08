@@ -1,7 +1,9 @@
+# please ignore everything below dashed line, we are re-do to practice classes
+
 class Puppy
 
   def initialize
-    p "Initializing puppy method"
+    p "Initializing new puppy instance..."
   end
 
   def speak(integer)
@@ -11,7 +13,7 @@ class Puppy
   end
 
   def roll_over
-    p "*rolls over*"
+    p " *rolls over*"
   end
 
   def dog_years(integer)
@@ -31,14 +33,53 @@ winston.dog_years(3)
 winston.poop
 
 
+# When mispelling initialize, that method does not run
+# but the other methods run
+# when other methods depend on initialize and it's spelled wrong...
+# then everything breaks and we get errors
 
 
 
+class Pizza
+
+  attr_reader :order
+  attr_accessor :size
+
+  def initialize(size)
+    @size = size
+    @order = {}
+  end
+
+  def add_topping(topping, quantity)
+    @order[topping] = quantity
+  end
+
+  def remove_topping(topping)
+    @order.delete(topping)
+  end
+
+  def update_topping(quantity)
+    @order[topping] = quantity
+  end
+
+  def price
+    # every pair in hash = $5
+  end
+
+  def print 
+    @order.each do |topping, quantity|
+      p "You ordered a #{size} pizza with #{quantity} #{topping}."
+    end
+  end
+
+  def deliver_to(location)
+    "Delivering #{@order.print} to #{location}!"
+  end
+
+end
 
 
-
-
-
+# if we had a user interface, would note the price of toppings
 
 
 
