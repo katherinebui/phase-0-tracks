@@ -88,7 +88,7 @@ end
 
 # veggie = Pizza.new("large")
 # veggie.add_topping("mushrooms", 4)
-# veggie.add_topping("bell pepers", 2)
+# veggie.add_topping("bell peppers", 2)
 # veggie.add_topping("olive", 1)
 # veggie.add_topping("onions", 5)
 # p veggie
@@ -104,6 +104,25 @@ end
 # veggie.print
 
 # veggie.deliver_to("Fernie's House")
+
+many_pizzas = []
+50.times do |pizza|
+  pizza = Pizza.new("large")
+  many_pizzas << pizza
+end 
+
+many_pizzas.each do |pie|
+  pie.add_topping("olive", 2)
+  pie.add_topping("bell peppers", 2)
+  pie.add_topping("sausage", 5)
+  pie.add_topping("bacon", 12)
+  pie.remove_topping("olive")
+  pie.update_topping("bell peppers", 1)
+  pie.price
+  pie.deliver_to("Greenland")
+  pie.print
+end
+# worst prank ever ^^
 
 
 
