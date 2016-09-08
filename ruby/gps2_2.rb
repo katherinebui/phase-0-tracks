@@ -146,9 +146,32 @@ update_grocery_item(grocery_hash, "ice-creams", 1)
 print(grocery_hash)
 
 
-# REFLECTIOn
 =begin
-  
+REFLECTION:
+
+What did you learn about pseudocode from working on this challenge?
+  I learned that the more time spent on pseudocode, the easier it  will be to actually code it all out.
+  At the same time, we did not expect our local variable problem until we started coding it - 
+  figuring that out took sooooo long!
+What are the tradeoffs of using arrays and hashes for this challenge?
+  I guess just converting from hash to array and vice versa took a bit of time, but it all made sense.
+  Also learning the right methods to use on each, some do not apply to both.
+What does a method return?
+  Methods will return the value of the last statement
+What kind of things can you pass into methods as arguments?
+  Your parameters set what you can pass in as arguments - strings, arrays, etc.
+  Any object, it looks like - hash, string, array, etc.
+How can you pass information between methods?
+  I would say instance variables - but since we aren't allowed to use this here, 
+  I just passed a hash through all the methods.
+  It took a little longer, but I am still working on how to make it more efficient.
+What concepts were solidified in this challenge, and what concepts are still confusing?
+  I need to practice writing more methods, it still gets me in a frenzy here and there.
+  I think I also need to find ways to bypass instance and global methods.
+  Passing a hash through everything works and just initializing it outside of the method.
+  Scope played a huge role in this challenge. We started by initializing the hash inside the first method,
+  but it worked out horrible because it created a new hash every time.
+
 =end
 
 
