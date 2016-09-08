@@ -1,36 +1,36 @@
 # please ignore everything below dashed line, we are re-do to practice classes
 
-class Puppy
+# class Puppy
 
-  def initialize
-    p "Initializing new puppy instance..."
-  end
+#   def initialize
+#     p "Initializing new puppy instance..."
+#   end
 
-  def speak(integer)
-    integer.times do 
-      p "Woof!"
-    end
-  end
+#   def speak(integer)
+#     integer.times do 
+#       p "Woof!"
+#     end
+#   end
 
-  def roll_over
-    p " *rolls over*"
-  end
+#   def roll_over
+#     p " *rolls over*"
+#   end
 
-  def dog_years(integer)
-    dog_age = integer * 7
-    p dog_age
-  end
+#   def dog_years(integer)
+#     dog_age = integer * 7
+#     p dog_age
+#   end
 
-  def poop
-    p "Let me out, human!"
-  end
+#   def poop
+#     p "Let me out, human!"
+#   end
 
-end
+# end
 
-winston = Puppy.new
-winston.speak(2)
-winston.dog_years(3)
-winston.poop
+# winston = Puppy.new
+# winston.speak(2)
+# winston.dog_years(3)
+# winston.poop
 
 
 # When mispelling initialize, that method does not run
@@ -58,30 +58,52 @@ class Pizza
     @order.delete(topping)
   end
 
-  def update_topping(quantity)
+  def update_topping(topping, quantity)
     @order[topping] = quantity
   end
 
   def price
-    # every pair in hash = $5
+  # calculate price by the number of items(topping), regardless of quantity
+  # i.e. 3 x mushroom and 2 x bell peppers = $6 ($3 a pop)
+    total_price = 0
+    @order.each do |topping, quantity|
+      total_price = @order.keys.length * 3
+    end
+    p total_price
   end
 
   def print 
+    puts "You ordered a #{size} pizza with:"
     @order.each do |topping, quantity|
-      p "You ordered a #{size} pizza with #{quantity} #{topping}."
+      puts " #{quantity} #{topping}"
     end
   end
 
   def deliver_to(location)
-    "Delivering #{@order.print} to #{location}!"
+    print 
+    puts "to #{location}!"
   end
 
 end
 
+# veggie = Pizza.new("large")
+# veggie.add_topping("mushrooms", 4)
+# veggie.add_topping("bell pepers", 2)
+# veggie.add_topping("olive", 1)
+# veggie.add_topping("onions", 5)
+# p veggie
 
-# if we had a user interface, would note the price of toppings
+# veggie.remove_topping("olive")
+# p veggie
 
+# veggie.update_topping("onions", 3)
+# p veggie
 
+# veggie.price
+
+# veggie.print
+
+# veggie.deliver_to("Fernie's House")
 
 
 
