@@ -1,24 +1,71 @@
+# please ignore everything below the dash line. I am redoing this for extra practice!
 
 require_relative 'todo_list'
 
 describe TodoList do
-  let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
+  let(:list) { TodoList.new(["do the dishes", "mow the lawn"])}
 
-  it "stores the list items given on initialization" do
+  it "stores the list items given on initialization" do 
     expect(list.get_items).to eq ["do the dishes", "mow the lawn"]
+  end 
+
+  it "adds an item to the list" do 
+    list.add_item("mopping")
+    expect(list.get_items).to eq ["do the dishes", "mow the lawn", "mopping"]
   end
 
-  it "adds an item to the list" do
-    list.add_item("mop")
-    expect(list.get_items).to eq ["do the dishes", "mow the lawn", "mop"]
-  end
-
-  it "deletes an item" do
+  it "deletes an item" do 
     list.delete_item("do the dishes")
     expect(list.get_items).to eq ["mow the lawn"]
-  end
+  end 
 
-  it "retrieves an item by index" do
+  it "gets an item by index" do 
     expect(list.get_item(0)).to eq "do the dishes"
   end
-end
+
+end 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# -----------------------------------------------
+
+# require_relative 'todo_list'
+
+# describe TodoList do
+#   let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
+
+#   it "stores the list items given on initialization" do
+#     expect(list.get_items).to eq ["do the dishes", "mow the lawn"]
+#   end
+
+#   it "adds an item to the list" do
+#     list.add_item("mop")
+#     expect(list.get_items).to eq ["do the dishes", "mow the lawn", "mop"]
+#   end
+
+#   it "deletes an item" do
+#     list.delete_item("do the dishes")
+#     expect(list.get_items).to eq ["mow the lawn"]
+#   end
+
+#   it "retrieves an item by index" do
+#     expect(list.get_item(0)).to eq "do the dishes"
+#   end
+# end
