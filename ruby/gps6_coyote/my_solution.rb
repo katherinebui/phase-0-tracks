@@ -6,6 +6,7 @@
 # EXPLANATION OF require_relative
 # require_relative allows you to get information from a related file in the same directory
 # it differs from require because the file has to be in the same directory
+
 require_relative 'state_data'
 
 class VirusPredictor
@@ -93,3 +94,38 @@ end
 
 #=======================================================================
 # Reflection Section
+
+
+=begin
+  
+1. What are the differences between the two different hash syntaxes shown in the state_data file?
+  one set of keys are strings and the other are symbols
+  learned today that two strings, when inspect will be located in different places
+  whereas symbols are better for memeory because it's tied to one location
+2. What does require_relative do? How is it different from require?
+  require_relative allows you to get information from a related file in the same directory
+  it differs from require because the file has to be in the same directory
+3. What are some ways to iterate through a hash?
+  .each, .each_key, .each_value
+4. When refactoring virus_effects, what stood out to you about the variables, if anything?
+  the other two methods don't need parameters, if you do add parameters, 
+  remember to include them consistently throughout the program
+  the parameters that were being passed where already defaulted in the beginning,
+  there was no need to type them again
+5. What concept did you most solidify in this challenge?
+  the different ways to iterate through a hash and how to access it's information,
+  especially in a hashy hash, there are ways to refactor to make code easier and cleaner to read
+  AWESOME SESSIONS
+  
+=end
+
+
+
+
+
+
+
+
+
+
+
