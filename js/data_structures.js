@@ -38,6 +38,7 @@ var yetAnotherCar = new Car("BMW", "green", true);
 console.log(car);
 console.log(anotherCar);
 console.log(yetAnotherCar);
+anotherCar.locksCar();
 
 
 
