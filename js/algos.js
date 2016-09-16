@@ -10,16 +10,16 @@
 
 
 // declare var outside loop because you don't want to keep recreating var
-function longest(array){
-  var measure = 0; 
-  var longestPhrase;
-  index = 0;
-  while(index < array.length){
-    index += 1;
-    for(var i = 0; i < array.length; i++){
-      if(measure < array[i].length){
-        measure = array[i].length;
-        longestPhrase = array[i];
+function longest(array){ // declare function
+  var measure = 0;  // use a measure variable to update the longest phrase during loop
+  var longestPhrase; // created var to store the longest phrase in
+  index = 0; // index for while loop
+  while(index < array.length){ // start of while loop to iterate thru full length of array
+    index += 1; // remember to increment or else will go on forever 
+    for(var i = 0; i < array.length; i++){ // for loop to iterate thru the each phrase 
+      if(measure < array[i].length){ // if phrase length is more than 0
+        measure = array[i].length; // then use that length as the new measure to find longest phrase
+        longestPhrase = array[i]; // the longest phrase is equal to phrase belong to measure
       }
     }
   }
