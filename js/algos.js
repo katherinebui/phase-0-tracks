@@ -10,16 +10,16 @@
 
 
 // declare var outside loop because you don't want to keep recreating var
-function longest(array){
-  var measure = 0; 
-  var longestPhrase;
-  index = 0;
-  while(index < array.length){
-    index += 1;
-    for(var i = 0; i < array.length; i++){
-      if(measure < array[i].length){
-        measure = array[i].length;
-        longestPhrase = array[i];
+function longest(array){ // declare function
+  var measure = 0;  // use a measure variable to update the longest phrase during loop
+  var longestPhrase; // created var to store the longest phrase in
+  index = 0; // index for while loop
+  while(index < array.length){ // start of while loop to iterate thru full length of array
+    index += 1; // remember to increment or else will go on forever 
+    for(var i = 0; i < array.length; i++){ // for loop to iterate thru the each phrase 
+      if(measure < array[i].length){ // if phrase length is more than 0
+        measure = array[i].length; // then use that length as the new measure to find longest phrase
+        longestPhrase = array[i]; // the longest phrase is equal to phrase belong to measure
       }
     }
   }
@@ -49,11 +49,11 @@ console.log(longest(animals));
 // If NO match = return false
 
 
-function match(obj1, obj2){
-  for(var i = 0; i < Object.keys(obj1).length; i++){
-    for(var j = 0; j < Object.keys(obj2).length; j++){
-      if(Object.keys(obj1)[i] == Object.keys(obj2)[j]){
-        if(obj1[Object.keys(obj1)[i]] == obj2[Object.keys(obj2)[j]]){
+function match(obj1, obj2){ // declare function to take in 2 parameters
+  for(var i = 0; i < Object.keys(obj1).length; i++){ // for loop to iterate thru the first obj
+    for(var j = 0; j < Object.keys(obj2).length; j++){ // for loop to iteratre thru the second obj
+      if(Object.keys(obj1)[i] == Object.keys(obj2)[j]){ // conditional IF match is found in KEYS
+        if(obj1[Object.keys(obj1)[i]] == obj2[Object.keys(obj2)[j]]){ // IF there is a KEY MATCH, then iterate thru values
           return true;
         }
       }
@@ -63,6 +63,7 @@ function match(obj1, obj2){
 // return false at the end because if the first condition is false, will return false and break
 // by returning at the end - it'll compare every element before returning false
 // .values is not support by browers, so have to access values through keys
+//  since .values does not work, had to access the values thru keys 
 }
 
 
@@ -84,7 +85,10 @@ var wildAnimals = {
 };
 
 console.log(match(pets, wildAnimals));
+// console.log(Object.keys(pets)[0]); 
+//   gets the first key
 // console.log(pets[Object.keys(pets)[0]]);
+//    testing get values thru keys
 
 
 // Release 2 : Random Test Data
@@ -94,32 +98,32 @@ console.log(match(pets, wildAnimals));
 // For loop?
 // WHAT LOOP?!
 
-function random(length){
-  var array = [];
-  var index = 0;
-  var alphabet = ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  while(index < length){
-    index += 1;
-    var finalString = "";
+function random(length){ // function
+  var array = []; // empty array to store words
+  var index = 0; // index for while loop to iterate
+  var alphabet = ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; // set alpha
+  while(index < length){ // while loop to iterate to set how many times to iterate, want length of array to equal the int being passed in
+    index += 1;  // increment by 1 for no infinite loops
+    var finalString = ""; // empty string to store words 
     // set final string inside loop because it needs to reset every time it adds a letter
-    for(var i = 0; i < Math.floor((Math.random() * 10) + 1); i++){
-      var letter = alphabet[Math.floor((Math.random() * 26) + 1)];
-      finalString += letter;
+    for(var i = 0; i < Math.floor((Math.random() * 10) + 1); i++){ // for loop to generate random # for length of word, no more than 10 letters 
+      var letter = alphabet[Math.floor((Math.random() * 26) + 1)]; // generate random letter from the alpha, add 1 to include the last letter
+      finalString += letter; // store new letters in the string
     }
-  array.push(finalString);
+  array.push(finalString); // push the string into new array
   }
   console.log(array);
   return array;
 }
 
-console.log(random(3));
+console.log(random(3)); // print out array of 3 random phrases
 
 
 // 10 x Generate an array
 // Feed array to longest function
 // Print results
-for(i = 0; i < 10; i++){
-longest(random(7));
+for(i = 0; i < 10; i++){ // print 10 arrays
+longest(random(7)); // with 7 in each array
   }
 
 
