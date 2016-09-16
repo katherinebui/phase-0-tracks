@@ -49,11 +49,11 @@ console.log(longest(animals));
 // If NO match = return false
 
 
-function match(obj1, obj2){
-  for(var i = 0; i < Object.keys(obj1).length; i++){
-    for(var j = 0; j < Object.keys(obj2).length; j++){
-      if(Object.keys(obj1)[i] == Object.keys(obj2)[j]){
-        if(obj1[Object.keys(obj1)[i]] == obj2[Object.keys(obj2)[j]]){
+function match(obj1, obj2){ // declare function to take in 2 parameters
+  for(var i = 0; i < Object.keys(obj1).length; i++){ // for loop to iterate thru the first obj
+    for(var j = 0; j < Object.keys(obj2).length; j++){ // for loop to iteratre thru the second obj
+      if(Object.keys(obj1)[i] == Object.keys(obj2)[j]){ // conditional IF match is found in KEYS
+        if(obj1[Object.keys(obj1)[i]] == obj2[Object.keys(obj2)[j]]){ // IF there is a KEY MATCH, then iterate thru values
           return true;
         }
       }
@@ -63,6 +63,7 @@ function match(obj1, obj2){
 // return false at the end because if the first condition is false, will return false and break
 // by returning at the end - it'll compare every element before returning false
 // .values is not support by browers, so have to access values through keys
+//  since .values does not work, had to access the values thru keys 
 }
 
 
@@ -84,7 +85,10 @@ var wildAnimals = {
 };
 
 console.log(match(pets, wildAnimals));
+// console.log(Object.keys(pets)[0]); 
+//   gets the first key
 // console.log(pets[Object.keys(pets)[0]]);
+//    testing get values thru keys
 
 
 // Release 2 : Random Test Data
