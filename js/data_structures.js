@@ -8,23 +8,19 @@ var names = ["Ombre", "Winston", "Charles", "Tina"];
 colors.push("white");
 names.push("Edward");
 
-console.log(colors);
-console.log(names);
+// console.log(colors);
+// console.log(names);
 
 var horses = {};
 
 function colorfulHorses(names, colors, horses){
   for(var i = 0; i < names.length; i++){
+    horses[names[i]] = colors[i];
+  };
+console.log(horses);
+} 
 
-  }
-}
-
-
-
-
-
-
-
+console.log(colorfulHorses(names, colors, horses));
 
 
 
