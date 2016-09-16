@@ -98,32 +98,32 @@ console.log(match(pets, wildAnimals));
 // For loop?
 // WHAT LOOP?!
 
-function random(length){
-  var array = [];
-  var index = 0;
-  var alphabet = ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  while(index < length){
-    index += 1;
-    var finalString = "";
+function random(length){ // function
+  var array = []; // empty array to store words
+  var index = 0; // index for while loop to iterate
+  var alphabet = ['a', 'b', 'd', 'e', 'f', 'g', 'h', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; // set alpha
+  while(index < length){ // while loop to iterate to set how many times to iterate, want length of array to equal the int being passed in
+    index += 1;  // increment by 1 for no infinite loops
+    var finalString = ""; // empty string to store words 
     // set final string inside loop because it needs to reset every time it adds a letter
-    for(var i = 0; i < Math.floor((Math.random() * 10) + 1); i++){
-      var letter = alphabet[Math.floor((Math.random() * 26) + 1)];
-      finalString += letter;
+    for(var i = 0; i < Math.floor((Math.random() * 10) + 1); i++){ // for loop to generate random # for length of word, no more than 10 letters 
+      var letter = alphabet[Math.floor((Math.random() * 26) + 1)]; // generate random letter from the alpha, add 1 to include the last letter
+      finalString += letter; // store new letters in the string
     }
-  array.push(finalString);
+  array.push(finalString); // push the string into new array
   }
   console.log(array);
   return array;
 }
 
-console.log(random(3));
+console.log(random(3)); // print out array of 3 random phrases
 
 
 // 10 x Generate an array
 // Feed array to longest function
 // Print results
-for(i = 0; i < 10; i++){
-longest(random(7));
+for(i = 0; i < 10; i++){ // print 10 arrays
+longest(random(7)); // with 7 in each array
   }
 
 
