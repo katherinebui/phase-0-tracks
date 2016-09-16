@@ -35,12 +35,24 @@ function Car(brand, color, breaksWork){
 var car = new Car("Tesla", "black", true);
 var anotherCar = new Car("Ford", "white", false);
 var yetAnotherCar = new Car("BMW", "green", true);
-console.log(car);
-console.log(anotherCar);
-console.log(yetAnotherCar);
-anotherCar.locksCar();
+// console.log(car);
+// console.log(anotherCar);
+// console.log(yetAnotherCar);
+// anotherCar.locksCar();
 
 
+// Research on our own: 
+// If you wanted to loop through the keys and values of an object, how would you do that? 
+//  use a for loop (similar to while loop) 
+
+
+for(var info in car){
+   console.log(info + " = " + car[info]);
+};
+
+
+console.log(Object.keys(car)); 
+// console.log(Object.values(car)); // values not supported 
 
 
 
