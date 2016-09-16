@@ -20,7 +20,24 @@ function colorfulHorses(names, colors, horses){
 console.log(horses);
 } 
 
-console.log(colorfulHorses(names, colors, horses));
+// console.log(colorfulHorses(names, colors, horses));
+
+function Car(brand, color, breaksWork){
+  this.brand = brand;
+  this.color = color;
+  this.breaksWork = breaksWork;
+
+  this.locksCar = function(){ 
+    console.log("*locks the car*");
+     }; 
+}
+
+var car = new Car("Tesla", "black", true);
+var anotherCar = new Car("Ford", "white", false);
+var yetAnotherCar = new Car("BMW", "green", true);
+console.log(car);
+console.log(anotherCar);
+console.log(yetAnotherCar);
 
 
 
