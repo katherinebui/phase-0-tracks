@@ -14,19 +14,18 @@
 // Print the result to the screen
 
 
-var reverse = function(string){
-  for(var i = string.length - 1; i >= 0; i--){
-  var backward = "";
-  backward += string[i]
-  console.log(backward);
+var reverse = function(string){ // set function to variable to call
+  for(var i = string.length - 1; i >= 0; i--){ // set a for loop to move backwards
+  var backward = ""; // set empty variable to store result in
+  backward += string[i] // add each letter into new variable backwards
+  console.log(backward); // print it
 }
 };
 
-firstAttempt = reverse("hello world");
+firstAttempt = reverse("hello world"); // driver code to see if it works
 
-if (1==1){
+if (1==1){ // setting conditional
   console.log(firstAttempt)
 } else {
   console.log("Goodbye!")
 }
-
