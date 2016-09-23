@@ -66,24 +66,25 @@ def randomize(db)
 end
 
 # USER INTERFACE
+
 puts "Having trouble finding something to do during your free time? Well, I have a solution for you!"
 puts "Type 'random' and I will give you something to do!"
 puts "Type 'add' to add a new activity to the generator."
 puts "To view all the activities, type 'display'."
+puts "To exit the program, type 'exit'."
 response = gets.chomp.downcase
 
-if response == "random"
+if response == "random".downcase
   randomize(db)
-elsif response == "add"
+elsif response == "add".downcase
   add(db)
-elsif response == "display"
+elsif response == "display".downcase
   display(db)
+elsif response == "exit".downcase
+  exit
 else
   puts "Sorry, I didn't get that. Please try again."
 end
-
-
-
 
 
 
