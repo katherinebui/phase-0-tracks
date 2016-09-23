@@ -54,9 +54,11 @@ def display(db)
 end
 
 
-# def randomize(db)
-  
-# end
+def randomize(db)
+  db.execute("SELECT * FROM free_time ORDER BY RANDOM() LIMIT 1;")
+end
+
+
 
 
 
