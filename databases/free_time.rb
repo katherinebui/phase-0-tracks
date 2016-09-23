@@ -39,10 +39,14 @@ end
 
 
 def add(db)
-  puts "If you would like to add an activity- please type in the activity, location, and length."
-    add_activity = gets.chomp.downcase
-    create_act(db, add_activity)
-  puts "This is what you added: #{add_activity}"
+  puts "If you would like to add an activity- please type an activity."
+    add_act = gets.chomp.downcase
+  puts "Next, please type a location for your activity."
+    add_location = gets.chomp.downcase
+  puts "Last, enter a length in minutes."
+    add_length = gets.chomp.downcase
+    create_act(db, add_act, add_location, add_length)
+  puts "You added #{add_act} at #{add_location} for #{add_length} minutes"
 end
 
 
@@ -55,10 +59,28 @@ end
 
 
 def randomize(db)
-  db.execute("SELECT * FROM free_time ORDER BY RANDOM() LIMIT 1;")
+  random = db.execute("SELECT * FROM free_time ORDER BY RANDOM() LIMIT 1;")
+  random.each do |act|
+    puts "You can #{act['activity']} at #{act['location']} for #{act['length']} minutes!"
+  end
 end
 
+# USER INTERFACE
+puts "Having trouble finding something to do during your free time? Well, I have a solution for you!"
+puts "Type 'random' and I will give you something to do!"
+puts "Type 'add' to add a new activity to the generator."
+puts "To view all the activities, type 'display'."
+response = gets.chomp.downcase
 
+if response == "random"
+  randomize(db)
+elsif response == "add"
+  add(db)
+elsif response == "display"
+  display(db)
+else
+  puts "Sorry, I didn't get that. Please try again."
+end
 
 
 
