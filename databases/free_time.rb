@@ -52,6 +52,7 @@ end
 
 def display(db)
   activities = db.execute("SELECT * FROM free_time")
+  puts "Here are all the activities that you can do during your free time:"
   activities.each do |act|
     puts "You can #{act['activity']} at #{act['location']} for #{act['length']} minutes!"
   end
