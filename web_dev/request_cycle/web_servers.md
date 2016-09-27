@@ -31,3 +31,40 @@ http://www.howtogeek.com/124950/htg-explains-why-you-shouldnt-log-into-your-linu
   - Vulnerability to software, it can harm your system because allowing access fully
   - Don't really need it to use
   - Applications don't need admin access to run
+
+
+
+
+
+
+
+
+
+RELEASE 2: THE DOM TREE
+DOM - document object model
+converting elements to objects
+- receieves HTML from server
+- starts at the top and starts converting
+- nodes: attributes
+- pathway from one element to another
+- each node is now complicated object
+- Parent/Child/Ancestor 
+  - parent/child
+  - sibling - any set of elements inside parent element
+- Ancestor: linkage of parents
+- Descendant: top down
+- can use CSS
+- or use .js to maniuplate the DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
