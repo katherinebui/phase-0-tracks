@@ -1,0 +1,23 @@
+#pineapple-photo {
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#origins {
+  text-align: center;
+}
+
+#ul {
+  list-style-type: none;
+}
+
+#button {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+}
