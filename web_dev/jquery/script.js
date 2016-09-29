@@ -1,10 +1,34 @@
-$(document).ready( function() {
-    $('button').click(function(){
-        if($('body').hasClass('black')) {
-          $('body').removeClass('black').addClass('white');
-        }
-        else {
-          $('body').removeClass('white').addClass('black');
-        }
-    });
+$(document).ready(function() {
+
+
+$('img').attr('src', 'pineapple.jpg');
+$('img').delay(500).fadeOut(800, function(){
+  $(this).attr('src', 'bwpineapp.jpg').fadeIn(800);
 });
+
+$('html').keypress(function(){
+  $(this).toogleClass('blue');
+});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

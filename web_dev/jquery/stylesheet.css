@@ -1,23 +1,47 @@
 #pineapple-photo {
-  height: 100px;
-  width: 100px;
+  height: 400px;
+  width: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-#origins {
+body {
+  max-width: 600px;
+  margin: 50px auto 300px;
+  font-family: arial;
+  line-height: 1.6;
+  text-align: center
+}
+
+#head {
   text-align: center;
 }
 
-#ul {
-  list-style-type: none;
+/*#blackwhite {
+  height: 350px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#button {
-  background-color: white;
+#quote {
+  height: 350px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
+
+#quotes {
+  text-align: center;
+  font-family: arial;
+  line-height: 1;
 }
 
-.black {
-  background-color: black;
+#links {
+  text-align: center;
+  font-family: arial;
 }
