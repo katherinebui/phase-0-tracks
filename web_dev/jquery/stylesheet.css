@@ -1,0 +1,50 @@
+#pineapple-photo {
+  height: 400px;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+body {
+  max-width: 600px;
+  margin: 50px auto 300px;
+  font-family: arial;
+  line-height: 1;
+  text-align: center
+}
+
+#origins {
+  margin-bottom: 15px;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 10px 20px;
+}
+
+#head {
+  text-align: center;
+}
+
+
+#quotes {
+  text-align: center;
+  font-family: arial;
+  line-height: 1;
+  border: 1px solid;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+#links {
+  text-align: center;
+  font-family: arial;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 10px 20px;
+
+}
+
+
+
+
