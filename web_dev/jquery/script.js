@@ -28,6 +28,14 @@ $('html').keypress(function(){
   $(this).toggleClass('orange');
 });
 
+
+$('body').click(function() {
+  $(this).css('background-image', 'url(pabackground.jpg)');
+});
+
+
+
+
 });
 
 
