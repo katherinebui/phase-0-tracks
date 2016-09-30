@@ -6,6 +6,11 @@
 <body>
   <h1>Add your contact information!</h1>
   <p>Want to help others? </p>
-  <p>Click <a href="contact/new">here</a> to add your contact information.</p>
+  <p>Click <a href="contacts/new">here</a> to add your contact information.</p>
+  <ul>
+    <% @students.each do |student| %>
+      <li><%= student['tip'] %></li>
+    <% end %>
+  </ul>
 </body>
 </html>
