@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>Feedback</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>We value your feedback!</h1>
+  <ul>
+    <% @tips.each do |tip| %>
+      <li><%= tip['tip'] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
