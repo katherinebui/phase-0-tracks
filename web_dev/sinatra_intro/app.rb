@@ -12,6 +12,15 @@ get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
+get '/good_job' do
+  person = params[:person]
+  if person 
+    "Good job, #{params[:person]}!"
+  else
+    "Good job!"
+  end
+end
+
 # write a GET route with
 # route parameters
 get '/about/:person' do
@@ -19,8 +28,19 @@ get '/about/:person' do
   "#{person} is a programmer, and #{person} is learning Sinatra."
 end
 
+get '/contact' do
+  "1234 Awesomeness, California 098765"
+end
+
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
+end
+
+get '/:first/plus/:second' do
+  first = params[:num1].to_i
+  second = params[:num1].to_i
+  third = first + second
+  "#{first} + #{second} = #{third}"
 end
 
 # write a GET route that retrieves
